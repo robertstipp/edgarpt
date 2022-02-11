@@ -6,15 +6,7 @@ import { GatsbyContext } from "../context/context"
 import CloseButton from "./CloseButton"
 
 const Sidebar = () => {
-  const { links, hideSidebar } = useContext(GatsbyContext)
-
-  const tempLinks = [
-    ...new Set(
-      links.map(link => {
-        return link.page
-      })
-    ),
-  ]
+  const { sociallinks, hideSidebar } = useContext(GatsbyContext)
 
   return (
     <Wrapper>
@@ -23,14 +15,15 @@ const Sidebar = () => {
           <CloseButton />
           {/* <MdClose className="icon" /> */}
         </button>
-        <div className="links">
-          {tempLinks.map((page, index) => {
-            const { url, label, icon } = page
-            console.log(page)
+        <div className="sociallinks">
+          {sociallinks.map(social => {
+            const { id, icon, url, label } = social
             return (
-              <Link to={url} key={index}>
-                {page}
-              </Link>
+              <div key={id}>
+                <a href={url} className="icon">
+                  {icon}
+                </a>
+              </div>
             )
           })}
         </div>
@@ -69,17 +62,19 @@ const Wrapper = styled.aside`
       cursor: pointer;
       color: var(--clr-red-dark);
     }
-    .links {
+    .sociallinks {
+      padding-top: 2rem;
       display: grid;
-      gap: 1rem 2rem;
+      gap: 1rem 4rem;
       @media (min-width: 768px) {
         grid-template-columns: 1fr 1fr;
       }
       a {
+        padding-left: 8rem;
         display: grid;
         grid-template-columns: auto 1fr;
-        gap: 0.75rem;
-        grid-gap: 0.75rem;
+        gap: 1rem;
+        grid-gap: 1rem;
         align-items: center;
         color: var(--clr-black);
         text-transform: capitalize;
@@ -87,7 +82,10 @@ const Wrapper = styled.aside`
         font-size: 1.2rem;
         .icon {
           color: var(--clr-black);
-          font-size: 2rem;
+          font-size: 10rem;
+        }
+        .label {
+          padding-left: 1rem;
         }
       }
     }

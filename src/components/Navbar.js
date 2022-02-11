@@ -25,7 +25,7 @@ const Navbar = () => {
           </Link>
           {!isSidebarOpen && (
             <button className="toggle-btn" onClick={showSidebar}>
-              <FaBullhorn />
+              <FaBullhorn size={40} />
             </button>
           )}
         </div>
@@ -76,8 +76,8 @@ const Wrapper = styled.nav`
       width: 100px;
     }
     .toggle-btn {
-      width: 3.5rem;
-      height: 2.25rem;
+      width: 4.5rem;
+      height: 3.25rem;
       display: flex;
       align-items: center;
       justify-content: center;

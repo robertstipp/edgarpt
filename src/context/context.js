@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import links from "../constants/links"
+import sociallinks from "../constants/sociallinks"
 
 const GatsbyContext = React.createContext()
 // Provider, Consumer
@@ -17,7 +18,7 @@ const GatsbyProvider = ({ children }) => {
 
   return (
     <GatsbyContext.Provider
-      value={{ isSidebarOpen, showSidebar, hideSidebar, links }}
+      value={{ isSidebarOpen, showSidebar, hideSidebar, links, sociallinks }}
     >
       {children}
     </GatsbyContext.Provider>

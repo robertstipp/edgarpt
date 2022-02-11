@@ -17,18 +17,18 @@ const Wrapper = styled.footer`
   height: 5rem;
   display: grid;
   place-items: center;
-  background: var(--clr-primary-5);
+  background: var(--clr-white);
   text-align: center;
   padding: 1rem;
   p {
-    color: var(--clr-white);
+    color: var(--clr-black);
     margin-bottom: 0;
     @media (max-width: 576px) {
       font-size: 0.75rem;
     }
   }
   .accent {
-    color: lightblue;
+    color: var(--clr-primary-5);
   }
 `
 

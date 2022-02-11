@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import logo from "../images/default-monochrome.svg"
 
 const Hero = () => {
   return (
@@ -14,8 +15,7 @@ const Hero = () => {
       />
       <div className="info">
         <article>
-          <h1>Edgar PT.</h1>
-          <h3>Training for Sport</h3>
+          <img src={logo} alt="just bobby" className="logo" />
         </article>
       </div>
     </Wrapper>
@@ -29,6 +29,9 @@ const Wrapper = styled.section`
   .img {
     height: 100%;
   }
+  .logo {
+    height: 400px;
+  }
   .info {
     position: absolute;
     top: 0;
@@ -37,7 +40,13 @@ const Wrapper = styled.section`
     height: 100%;
     display: grid;
     place-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.5));
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      196deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(255, 0, 0, 0.4) 0%,
+      rgba(251, 255, 0, 0.3) 100%
+    );
   }
 
   article {
@@ -49,7 +58,7 @@ const Wrapper = styled.section`
       text-transform: uppercase;
       font-weight: 500;
       line-height: 1.25;
-      margin: 2rem 0 3rem 0;
+      margin: 1rem 0 3rem 0;
       letter-spacing: 3px;
     }
     h3 {

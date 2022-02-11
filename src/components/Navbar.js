@@ -33,9 +33,6 @@ const Navbar = () => {
           {tempLinks.map((page, index) => {
             return <NavLink key={index} page={page} />
           })}
-          <Link to="/contact" className="contact-button">
-            Contact
-          </Link>
         </ul>
       </div>
     </Wrapper>
@@ -76,6 +73,7 @@ const Wrapper = styled.nav`
     justify-content: space-between;
     img {
       height: 100px;
+      width: 100px;
     }
     .toggle-btn {
       width: 3.5rem;
@@ -112,10 +110,12 @@ const Wrapper = styled.nav`
       align-items: center;
     }
     .nav-links {
+      margin-left: 500px;
+      margin-right: 100px;
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      grid-gap: 0 3rem;
-      max-width: 800px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0 2rem;
+      max-width: 400px;
     }
     li {
       color: var(--clr-grey-4);

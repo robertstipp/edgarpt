@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { MdClose } from "react-icons/md"
 import { Link } from "gatsby"
 import { GatsbyContext } from "../context/context"
+import CloseButton from "./CloseButton"
 
 const Sidebar = () => {
   const { links, hideSidebar } = useContext(GatsbyContext)
@@ -19,7 +20,8 @@ const Sidebar = () => {
     <Wrapper>
       <div className="container">
         <button onClick={hideSidebar}>
-          <MdClose className="icon" />
+          <CloseButton />
+          {/* <MdClose className="icon" /> */}
         </button>
         <div className="links">
           {tempLinks.map((page, index) => {

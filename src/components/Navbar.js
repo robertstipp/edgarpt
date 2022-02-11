@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import styled from "styled-components"
 import logo from "../images/default.svg"
 import { Link } from "gatsby"
-import { GoThreeBars } from "react-icons/go"
+import { FaBullhorn } from "react-icons/fa"
 import NavLink from "./NavLink"
 import { GatsbyContext } from "../context/context"
 
@@ -25,7 +25,7 @@ const Navbar = () => {
           </Link>
           {!isSidebarOpen && (
             <button className="toggle-btn" onClick={showSidebar}>
-              <GoThreeBars />
+              <FaBullhorn />
             </button>
           )}
         </div>
@@ -47,7 +47,7 @@ const Wrapper = styled.nav`
   align-items: center;
   .contact-button {
     color: var(--clr-white);
-    background: var(--clr-primary-7);
+    background: var(--clr-primary-8);
     border: 1px solid var(--clr-primary-5);
     font-size: 1rem;
     letter-spacing: 2px;
@@ -84,12 +84,14 @@ const Wrapper = styled.nav`
       font-size: 1.75rem;
       border-radius: 0.2rem;
       border: transparent;
-      color: var(--clr-white);
-      background: var(--clr-primary-2);
+      color: var(--clr-black);
+      background: var(--clr-primary-8);
       cursor: pointer;
       transition: var(--transition);
       &:hover {
-        background: var(--clr-primary-4);
+        background: var(--clr-grey-9);
+        color: var(--clr-black);
+        border: 3px solid var(--clr-black);
       }
     }
   }

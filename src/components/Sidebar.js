@@ -46,7 +46,7 @@ const Wrapper = styled.aside`
     display: none;
   }
   .container {
-    background: var(--clr-white);
+    background: var(--clr-primary-9);
     width: 80vw;
     height: 80vh;
     border-radius: var(--radius);
@@ -65,16 +65,13 @@ const Wrapper = styled.aside`
     .sociallinks {
       padding-top: 2rem;
       display: grid;
-      gap: 1rem 4rem;
+      gap: 1.2rem 4rem;
       @media (min-width: 768px) {
         grid-template-columns: 1fr 1fr;
       }
       a {
-        padding-left: 8rem;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 1rem;
-        grid-gap: 1rem;
+        display: flex;
+        justify-content: center;
         align-items: center;
         color: var(--clr-black);
         text-transform: capitalize;
@@ -83,6 +80,9 @@ const Wrapper = styled.aside`
         .icon {
           color: var(--clr-black);
           font-size: 10rem;
+        }
+        &:hover {
+          color: var(--clr-grey-2);
         }
         .label {
           padding-left: 1rem;

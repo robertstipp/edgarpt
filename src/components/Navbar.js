@@ -87,14 +87,9 @@ const Wrapper = styled.nav`
       border-radius: 0.2rem;
       border: transparent;
       color: var(--clr-black);
-      background: var(--clr-primary-8);
+      background: transparent;
       cursor: pointer;
       transition: var(--transition);
-      &:hover {
-        background: var(--clr-grey-9);
-        color: var(--clr-black);
-        border: 3px solid var(--clr-black);
-      }
     }
   }
   .nav-links {

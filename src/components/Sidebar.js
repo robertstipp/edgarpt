@@ -84,6 +84,7 @@ const Wrapper = styled.aside`
         &:hover {
           color: var(--clr-grey-2);
         }
+
         .label {
           padding-left: 1rem;
         }

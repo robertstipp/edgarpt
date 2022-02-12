@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 import { FaBullhorn } from "react-icons/fa"
 import NavLink from "./NavLink"
 import { GatsbyContext } from "../context/context"
+import DumbellButton from "./DumbellButton"
 
 const Navbar = () => {
   const { isSidebarOpen, showSidebar, links } = useContext(GatsbyContext)
@@ -25,7 +26,8 @@ const Navbar = () => {
           </Link>
           {!isSidebarOpen && (
             <button className="toggle-btn" onClick={showSidebar}>
-              <FaBullhorn size={40} />
+              <DumbellButton />
+              {/* <FaBullhorn size={40} /> */}
             </button>
           )}
         </div>
